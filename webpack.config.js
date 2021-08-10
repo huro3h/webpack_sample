@@ -46,7 +46,10 @@ module.exports = {
     // 出力先フォルダ
     path: `${__dirname}/dist`,
     // 出力先ファイル名
-    filename: "main.js"
+    filename: "main.js",
+    // publicPathパラメータ: CDNからassets配信時など、url関数を書き換えたい場合とか
+    // build時にurl関数の値をリライトする
+    // publicPath: "http://cdn.example.com/"
   },
   devServer: {
     contentBase: './dist'
