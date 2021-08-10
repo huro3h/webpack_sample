@@ -12,6 +12,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
+    "start": "webpack server --open",
     "build": "webpack --config webpack.config.js"
   }
 }

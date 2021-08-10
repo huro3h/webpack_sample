@@ -7,5 +7,8 @@ module.exports = {
     path: `${__dirname}/dist`,
     // 出力先ファイル名
     filename: "main.js"
-  }
+  },
+  devServer: {
+    contentBase: './dist'
+  },
 }
