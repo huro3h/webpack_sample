@@ -23,7 +23,13 @@ module.exports = {
       {
         // url-loaderで画像ファイルのバンドル
         test: /\.(gif|png|jpg|jpeg|svg|ttf|wof)/,
-        loader: 'url-loader'
+        loader: 'url-loader',
+        options: {
+          // file-loaderで画像サイズを制限する
+          // しきい値を超えたら画像ファイルはファイル出力
+          limit: 5120,
+          name: './images/[name].[ext]'
+        }
       }
     ]
   },

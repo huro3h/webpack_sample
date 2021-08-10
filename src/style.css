@@ -1,3 +1,6 @@
-.sky {
-  background-color: #E0FFFF;
+/*.sky {*/
+/*  background-color: #E0FFFF;*/
+/*}*/
+body {
+  background-image: url('./images/bird.jpg');
 }
