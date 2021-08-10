@@ -13,6 +13,6 @@
   },
   "scripts": {
     "start": "webpack server --open",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --watch --config webpack.config.js"
   }
 }
