@@ -11,14 +11,18 @@ module.exports = {
   module: {
     rules: [
       {
+        // file-loaderでフォントファイルを処理する
+        test: /\.(woff|woff2|eot|ttf|otf)/,
+        use: [
+          'file-loader'
+        ]
+      },
+      {
         // css-loader, style-loaderの有効化
         test: /\.css$/,
-        use: [
-          // ローダーは指定された逆順で処理される
-          // 2.プラグインを適用する
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        // ローダーは指定された逆順で処理される
+        // 2.プラグインを適用する
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         // url-loaderで画像ファイルのバンドル

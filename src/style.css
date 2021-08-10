@@ -1,6 +1,10 @@
-/*.sky {*/
-/*  background-color: #E0FFFF;*/
-/*}*/
+@font-face {
+  font-family: 'Custom';
+  src: url('./NotoSans-Thin.ttf') format('truetype');
+}
+
 body {
-  background-image: url('./images/bird.jpg');
+  font-family: 'Custom';
+  font-size: 30px;
+  color: #333
 }
