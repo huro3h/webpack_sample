@@ -1,4 +1,5 @@
 module.exports = {
+  // 実行モード 設定が無いと4以降は警告が出る
   mode: 'development',
   // エントリーポイント
   entry: './src/index.js',
