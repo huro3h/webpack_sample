@@ -5,4 +5,3 @@ let body = document.getElementsByTagName('body')[0];
 body.classList.add('sky');
 
 console.log(APP_NAME);
-console.log('ここまでがスタイルシートのバンドル');
