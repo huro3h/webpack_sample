@@ -2,4 +2,4 @@ import { APP_NAME, hello, Figure } from "./myutil";
 
 console.log(APP_NAME);
 hello()
-console.log(Figure.double(25));
+console.log(Figure.double(250));
