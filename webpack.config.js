@@ -13,12 +13,21 @@ module.exports = {
         test: /\.css$/,
         use: [
           // ローダーは指定された逆順で処理される
-          'style-loader',
+          // 2.プラグインを適用する
+          MiniCssExtractPlugin.loader,
           'css-loader'
         ]
       }
     ]
   },
+  
+  plugins: [
+    // スタイルシートを別ファイルとしてlink要素で埋め込む為
+    // 1. 使用するプラグインの登録
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })
+  ],
   
   output: {
     // 出力先フォルダ
