@@ -1,13 +1,14 @@
 {
   "name": "webpack_sample",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "git@github.com:huro3h/webpack_sample.git",
   "author": "huro3h <huro3h@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "webpack": "^5.49.0",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
