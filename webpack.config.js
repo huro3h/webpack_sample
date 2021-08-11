@@ -8,6 +8,13 @@ module.exports = {
   entry: './src/index.js',
   // 開発環境でのデバッグ用, minifyではなくオリジナルに近いコードがマッピングされる
   // https://webpack.js.org/configuration/devtool/
+  
+  // 複数のエントリーポイントを設定したい場合
+  // entry: {
+  //   main: './src/main.js',
+  //   sub: './src/sub.js'
+  // },
+  
   devtool: 'eval-source-map',
   module: {
     rules: [
@@ -138,7 +145,22 @@ module.exports = {
     // publicPathパラメータ: CDNからassets配信時など、url関数を書き換えたい場合とか
     // build時にurl関数の値をリライトする
     // publicPath: "http://cdn.example.com/"
+    
+    // 複数エントリーポイント設定時
+    // filename: '[name]-[chunkhash].js'
   },
+  
+  // 共通ライブラリを切り出して最適化する場合の設定
+  // optimization: {
+  //   splitChunks: {
+  //     // バンドルされた共通ライブラリに付与する名前
+  //     name: 'hogecommonlib',
+  //
+  //     // 共通ライブラリとして切り出す対象を表す
+  //     chunks: 'initial'
+  //   }
+  // },
+  
   devServer: {
     contentBase: './dist'
   },
