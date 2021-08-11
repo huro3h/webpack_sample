@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   // 実行モード 設定が無いと4以降は警告が出る
@@ -10,30 +11,30 @@ module.exports = {
   devtool: 'eval-source-map',
   module: {
     rules: [
-      {
-        // jsファイルを処理するためのローダー
-        test: /\.js$/,
-        // ローダー処理の除外対象
-        exclude: /(node_modules|bower_components)/,
-        use: [
-          {
-            // ローダー名を設定
-            loader: 'babel-loader',
-            options: {
-              // プリセットの設定
-              presets: [
-                [
-                  // ES2015以降のコードを変換
-                  '@babel-preset-env',
-                  // ESモジュール構文を別のモジュール構文に変換する設定を無効化
-                  // webpack環境では不要の為
-                  { 'modules': false }
-                ]
-              ]
-            }
-          }
-        ],
-      },
+      // {
+      //   // jsファイルを処理するためのローダー
+      //   test: /\.js$/,
+      //   // ローダー処理の除外対象
+      //   exclude: /(node_modules|bower_components)/,
+      //   use: [
+      //     {
+      //       // ローダー名を設定
+      //       loader: 'babel-loader',
+      //       options: {
+      //         // プリセットの設定
+      //         presets: [
+      //           [
+      //             // ES2015以降のコードを変換
+      //             '@babel-preset-env',
+      //             // ESモジュール構文を別のモジュール構文に変換する設定を無効化
+      //             // webpack環境では不要の為
+      //             { 'modules': false }
+      //           ]
+      //         ]
+      //       }
+      //     }
+      //   ],
+      // },
       {
         // TypeScriptコードを処理するためのローダー
         test: /\.ts$/,
@@ -120,7 +121,8 @@ module.exports = {
     // 1. 使用するプラグインの登録
     new MiniCssExtractPlugin({
       filename: 'style.css'
-    })
+    }),
+    new ESLintPlugin({})
   ],
   
   resolve: {
