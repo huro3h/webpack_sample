@@ -57,6 +57,8 @@ module.exports = {
       {
         // Sassファイルを処理するためのローダー
         test: /\.scss$/,
+        // 記述の逆順で処理されるため
+        // sassコンパイル -> css-loaderでモジュール化 -> style-loaderでページに組み込み
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
