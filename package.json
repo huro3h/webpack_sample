@@ -39,6 +39,6 @@
   },
   "scripts": {
     "start": "webpack server --open --config webpack.development.js",
-    "build": "webpack --watch --config webpack.production.js"
+    "build": "webpack --config webpack.production.js"
   }
 }
