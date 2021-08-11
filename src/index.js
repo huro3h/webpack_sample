@@ -3,6 +3,7 @@ import './style.css'
 import picture from './images/bird.jpg'
 import jsonData from './sample.json'
 import csv from './sample.csv'
+import html from './sample.html'
 
 // window.addEventListener('DOMContentLoaded', function(){
 //   let img = new Image();
@@ -17,3 +18,5 @@ console.log(jsonData[0].id);
 
 console.log(csv[0][1]);
 console.log(csv[0][2]);
+
+console.log(html);
