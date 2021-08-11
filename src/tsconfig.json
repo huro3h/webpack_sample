@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es5", // 実行環境がOKならes6でも可
     "sourceMap": true,
     "module": "es2015",
     "moduleResolution": "node",
     "lib": [
-      "es2020",
+      "es2020", // TypeScriptでES2020を利用するため指定, 機能によってはes2015指定
       "dom"
     ],
     "noImplicitAny": true
@@ -15,3 +15,6 @@
 // target: 生成するJSのバージョン
 // sourceMap: ソースマップを作成するか
 // module: 生成するJSモジュールの形式
+// moduleResolution: モジュールの解決方法
+// lib: コンパイル時にインクルードされるライブラリ
+// noImplicitAny: trueの場合、暗黙的なany型を許容しない
