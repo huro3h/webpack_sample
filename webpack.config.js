@@ -52,7 +52,7 @@ module.exports = {
         test: /\.css$/,
         // ローダーは指定された逆順で処理される
         // 2.プラグインを適用する
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         // html-loaderの処理
