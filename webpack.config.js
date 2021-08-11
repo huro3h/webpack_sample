@@ -33,8 +33,7 @@ module.exports = {
           options: {
             // 属性値をリソースとして処理すべきかどうかを指定, defaultでtrueなので省略可
             // 規定の主な属性 -> src, srcset, href, data, poster
-            sources: true,
-            minimize: true
+            sources: true
             
             // 処理対象の属性を制限したい時はオブジェクト配列の形式で定義する
             // 例: 標準でサポートする属性に加えて、<img>要素のdata-src属性をリソースとして処理する場合
