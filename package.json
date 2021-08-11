@@ -38,7 +38,7 @@
     "xml-loader": "^1.2.1"
   },
   "scripts": {
-    "start": "webpack server --open",
-    "build": "webpack --watch --config webpack.config.js"
+    "start": "webpack server --open --config webpack.development.js",
+    "build": "webpack --watch --config webpack.production.js"
   }
 }
