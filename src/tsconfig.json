@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "noImplicitAny": true
+  }
+}
+
+// target: 生成するJSのバージョン
+// sourceMap: ソースマップを作成するか
+// module: 生成するJSモジュールの形式

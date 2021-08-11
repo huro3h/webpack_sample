@@ -37,7 +37,8 @@ module.exports = {
       {
         // TypeScriptコードを処理するためのローダー
         test: /\.ts$/,
-        loader: 'ts-loader'
+        loader: 'ts-loader',
+        exclude: /node_modules/
       },
       {
         // file-loaderでフォントファイルを処理する
@@ -114,6 +115,11 @@ module.exports = {
       filename: 'style.css'
     })
   ],
+  
+  resolve: {
+    // インポート時に認識する拡張子
+    extensions: ['.tsx', '.ts', '.js', '.json'],
+  },
   
   output: {
     // 出力先フォルダ
