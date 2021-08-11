@@ -10,6 +10,7 @@
     "css-loader": "^6.2.0",
     "csv-loader": "^3.0.3",
     "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
     "mini-css-extract-plugin": "^2.2.0",
     "style-loader": "^3.2.1",
     "url-loader": "^4.1.1",
