@@ -1,7 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const path = require('path');
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   // 実行モード 設定が無いと4以降は警告が出る
@@ -140,7 +141,10 @@ module.exports = {
       title: 'Custom template',
       // Load a custom template (lodash by default)
       template: 'src/index.html'
-    })
+    }),
+    
+    // 設定した出力先フォルダをビルド前にクリーンアップする
+    new CleanWebpackPlugin(),
   ],
   
   resolve: {
