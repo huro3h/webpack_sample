@@ -11,30 +11,30 @@ module.exports = {
   devtool: 'eval-source-map',
   module: {
     rules: [
-      // {
-      //   // jsファイルを処理するためのローダー
-      //   test: /\.js$/,
-      //   // ローダー処理の除外対象
-      //   exclude: /(node_modules|bower_components)/,
-      //   use: [
-      //     {
-      //       // ローダー名を設定
-      //       loader: 'babel-loader',
-      //       options: {
-      //         // プリセットの設定
-      //         presets: [
-      //           [
-      //             // ES2015以降のコードを変換
-      //             '@babel-preset-env',
-      //             // ESモジュール構文を別のモジュール構文に変換する設定を無効化
-      //             // webpack環境では不要の為
-      //             { 'modules': false }
-      //           ]
-      //         ]
-      //       }
-      //     }
-      //   ],
-      // },
+      {
+        // jsファイルを処理するためのローダー
+        test: /\.m?js$/,
+        // ローダー処理の除外対象
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            // ローダー名を設定
+            loader: 'babel-loader',
+            options: {
+              // プリセットの設定
+              presets: [
+                [
+                  // ES2015以降のコードを変換
+                  '@babel-preset-env',
+                  // ESモジュール構文を別のモジュール構文に変換する設定を無効化
+                  // webpack環境では不要の為
+                  { 'modules': false }
+                ]
+              ]
+            }
+          }
+        ],
+      },
       {
         // TypeScriptコードを処理するためのローダー
         test: /\.ts$/,
