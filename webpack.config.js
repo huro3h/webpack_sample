@@ -35,6 +35,11 @@ module.exports = {
         ],
       },
       {
+        // TypeScriptコードを処理するためのローダー
+        test: /\.ts$/,
+        loader: 'ts-loader'
+      },
+      {
         // file-loaderでフォントファイルを処理する
         test: /\.(woff|woff2|eot|ttf|otf)/,
         use: [
