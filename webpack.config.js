@@ -1,5 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const path = require('path');
 
 module.exports = {
   // 実行モード 設定が無いと4以降は警告が出る
@@ -129,7 +131,16 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
-    new ESLintPlugin({})
+    
+    // ESLintPlugin(eslint-loaderに代わるもの)
+    new ESLintPlugin({}),
+    
+    // トップページの自動生成プラグイン
+    new HtmlWebpackPlugin({
+      title: 'Custom template',
+      // Load a custom template (lodash by default)
+      template: 'src/index.html'
+    })
   ],
   
   resolve: {
