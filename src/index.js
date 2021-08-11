@@ -1,6 +1,6 @@
 import { APP_NAME, hello, Figure } from "./myutil";
 import './style.css'
-import picture from './images/bird.jpg'
+import picture from './images/houseum.jpg'
 import jsonData from './sample.json'
 import csv from './sample.csv'
 import html from './sample.html'
