@@ -34,6 +34,13 @@ module.exports = {
           limit: 5120,
           name: './images/[name].[ext]'
         }
+      },
+      {
+        // csv-loaderでcsvファイルを処理する
+        test: /\.(csv|tsv)$/,
+        use: [
+          'csv-loader'
+        ]
       }
     ]
   },
