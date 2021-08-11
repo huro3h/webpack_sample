@@ -25,13 +25,39 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
+        // html-loaderの処理
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+          // (url-loaderでリソースを処理する)
+          options: {
+            // 属性値をリソースとして処理すべきかどうかを指定, defaultでtrueなので省略可
+            // 規定の主な属性 -> src, srcset, href, data, poster
+            attributes: true
+  
+            // 処理対象の属性を制限したい時はオブジェクト配列の形式で定義する
+            // 例: 標準でサポートする属性に加えて、<img>要素のdata-src属性をリソースとして処理する場合
+            // attributes: {
+            //   list: [
+            //     '...',
+            //     {
+            //       tag: 'img',
+            //       attribute: 'data-src',
+            //       type: 'src'
+            //     }
+            //   ]
+            // }
+          }
+        }
+      },
+      {
         // url-loaderで画像ファイルのバンドル
         test: /\.(gif|png|jpg|jpeg|svg|ttf|wof)/,
         loader: 'url-loader',
         options: {
           // file-loaderで画像サイズを制限する
           // しきい値を超えたら画像ファイルはファイル出力
-          limit: 5120,
+          limit: 51200,
           name: './images/[name].[ext]'
         }
       },
