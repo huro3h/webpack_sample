@@ -51,6 +51,13 @@ module.exports = {
         }
       },
       {
+        // xml-loaderの処理
+        test: /\.xml$/,
+        use: [
+          'xml-loader'
+        ]
+      },
+      {
         // url-loaderで画像ファイルのバンドル
         test: /\.(gif|png|jpg|jpeg|svg|ttf|wof)/,
         loader: 'url-loader',
