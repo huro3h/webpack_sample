@@ -55,6 +55,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
+        // Sassファイルを処理するためのローダー
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         // html-loaderの処理
         test: /\.html$/,
         use: {
