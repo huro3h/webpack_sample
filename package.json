@@ -6,6 +6,7 @@
   "author": "huro3h <huro3h@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "terser-webpack-plugin": "^5.1.4",
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
