@@ -5,7 +5,9 @@
   "repository": "git@github.com:huro3h/webpack_sample.git",
   "author": "huro3h <huro3h@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "webpack-merge": "^5.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",

@@ -2,9 +2,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = {
+// 設定ファイルを環境毎に分離する(共通ファイルは webpack.base.js)
+const { merge } = require('webpack-merge');
+
+// マージする設定ファイルのインポート
+const base = require('./webpack.base.js');
+
+module.exports = merge(base, {
   // 実行モード 設定が無いと4以降は警告が出る
   mode: 'development',
   // エントリーポイント
@@ -179,4 +185,4 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-}
+});
