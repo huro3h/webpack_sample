@@ -25,7 +25,7 @@ module.exports = {
               presets: [
                 [
                   // ES2015以降のコードを変換
-                  '@babel-preset-env',
+                  '@babel/preset-env',
                   // ESモジュール構文を別のモジュール構文に変換する設定を無効化
                   // webpack環境では不要の為
                   { 'modules': false }
