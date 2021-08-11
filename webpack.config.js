@@ -7,9 +7,33 @@ module.exports = {
   entry: './src/index.js',
   // 開発環境でのデバッグ用, minifyではなくオリジナルに近いコードがマッピングされる
   // https://webpack.js.org/configuration/devtool/
-  devtool:'eval-source-map',
+  devtool: 'eval-source-map',
   module: {
     rules: [
+      {
+        // jsファイルを処理するためのローダー
+        test: /\.js$/,
+        // ローダー処理の除外対象
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            // ローダー名を設定
+            loader: 'babel-loader',
+            options: {
+              // プリセットの設定
+              presets: [
+                [
+                  // ES2015以降のコードを変換
+                  '@babel-preset-env',
+                  // ESモジュール構文を別のモジュール構文に変換する設定を無効化
+                  // webpack環境では不要の為
+                  { 'modules': false }
+                ]
+              ]
+            }
+          }
+        ],
+      },
       {
         // file-loaderでフォントファイルを処理する
         test: /\.(woff|woff2|eot|ttf|otf)/,
@@ -88,7 +112,7 @@ module.exports = {
   
   output: {
     // 出力先フォルダ
-    path: `${__dirname}/dist`,
+    path: `${ __dirname }/dist`,
     // 出力先ファイル名
     filename: "main.js",
     // publicPathパラメータ: CDNからassets配信時など、url関数を書き換えたい場合とか
