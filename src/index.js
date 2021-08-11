@@ -1,10 +1,10 @@
-import { APP_NAME, hello, Figure } from "./myutil";
-import './style.css'
-import picture from './images/houseum.jpg'
-import jsonData from './sample.json'
-import csv from './sample.csv'
-import html from './sample.html'
-import xml from './sample.xml'
+// import { APP_NAME, hello, Figure } from "./myutil";
+import './style.css';
+// import picture from './images/houseum.jpg'
+// import jsonData from './sample.json'
+// import csv from './sample.csv'
+// import html from './sample.html'
+// import xml from './sample.xml'
 
 // window.addEventListener('DOMContentLoaded', function(){
 //   let img = new Image();
@@ -22,11 +22,15 @@ import xml from './sample.xml'
 //
 // console.log(html);
 
-// <data>要素配下の0番目の<row>要素
-console.log(xml.data.row[0]);
+// // <data>要素配下の0番目の<row>要素
+// console.log(xml.data.row[0]);
+//
+// // <data>要素配下の1番目の<row>要素のid属性
+// console.log(xml.data.row[1].$.id);
+//
+// // <data>要素配下の2番目の<row>要素の本体テキスト
+// console.log(xml.data.row[2]._);
 
-// <data>要素配下の1番目の<row>要素のid属性
-console.log(xml.data.row[1].$.id);
-
-// <data>要素配下の2番目の<row>要素の本体テキスト
-console.log(xml.data.row[2]._);
+// const name = 'hoge';
+// console.log(`こんにちは ${name}!!`);
+// console.log(0b11 === 3);

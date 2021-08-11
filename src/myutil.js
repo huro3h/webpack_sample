@@ -1,6 +1,6 @@
-let message = 'nemui?'
+const message = 'nemui?';
 
-export const APP_NAME = 'webpack_sample'
+export const APP_NAME = 'webpack_sample';
 
 export function hello() {
   console.log(message);
@@ -9,6 +9,6 @@ export function hello() {
 // Class
 export class Figure {
   static double(base) {
-    return base * 2
+    return base * 2;
   }
 }
